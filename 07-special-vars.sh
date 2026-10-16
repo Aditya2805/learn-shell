@@ -12,5 +12,5 @@ echo "PID of current script: $$"
 sleep 10 &
 echo "PID of command running in background: $!"
 echo "Line number: $LINENO"
-echo Previous command exit status: $?"
+echo "Previous command exit status: $?"
 

@@ -14,7 +14,7 @@ mkdir -p $logs_folder
 echo "script started execution at $(date +"%F %T")" &>> $logs_file
 
 validate(){
-    if [ $1 -ne 0]; then
+    if [ $1 -ne 0 ]; then
     echo "${2} failed.." | tee -a $logs_file
     exit 1
 else 
@@ -27,7 +27,7 @@ echo "proceeding.."
 dnf install nginx -y &>> $logs_file
 validate $? "nginx installation.."
 
-dnf install mysql -y &?? $logs_file
+dnf install mysql -y &>> $logs_file
 validate $? "mysql installation..."
 
 echo "script ended execution at $(date +"%F %T")" &>> $logs_file
